@@ -63,6 +63,7 @@ public class BMICalculator extends Application{
 		
 		// Create Scene
 		Scene scene = new Scene(bPane, 250, 120);
+		primaryStage.setResizable(false);
 		primaryStage.setTitle("BMI Calculator");
 		primaryStage.setScene(scene);
 		primaryStage.show();
