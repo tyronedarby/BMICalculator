@@ -43,7 +43,7 @@
 
     <build>
         <!--
-            The library lives in src/edu/georgiasouthern/bmi. The JavaFX UI (package
+            The library lives in src/io/github/tyronedarby/bmi. The JavaFX UI (package
             bmi) and module-info are excluded so the published artifact stays
             dependency-free and importable anywhere on the JVM.
         -->
@@ -78,7 +78,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <sourcepath>src/edu/georgiasouthern/bmi</sourcepath>
+                    <sourcepath>src/io/github/tyronedarby/bmi</sourcepath>
                 </configuration>
                 <executions>
                     <execution>

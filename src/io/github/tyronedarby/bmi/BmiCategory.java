@@ -1,4 +1,4 @@
-package edu.georgiasouthern.bmi;
+package io.github.tyronedarby.bmi;
 
 /**
  * World Health Organization weight-status categories derived from a

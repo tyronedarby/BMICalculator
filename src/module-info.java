@@ -5,5 +5,5 @@ module BMICalculator {
 	requires javafx.media;
 
 	exports bmi;
-	exports edu.georgiasouthern.bmi;
+	exports io.github.tyronedarby.bmi;
 }

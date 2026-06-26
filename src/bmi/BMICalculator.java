@@ -4,8 +4,8 @@
 
 package bmi;
 
-import edu.georgiasouthern.bmi.BmiCalculator;
-import edu.georgiasouthern.bmi.BmiCategory;
+import io.github.tyronedarby.bmi.BmiCalculator;
+import io.github.tyronedarby.bmi.BmiCategory;
 
 import javafx.application.Application;
 import javafx.geometry.Pos;

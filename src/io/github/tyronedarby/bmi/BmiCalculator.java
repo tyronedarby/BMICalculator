@@ -1,4 +1,4 @@
-package edu.georgiasouthern.bmi;
+package io.github.tyronedarby.bmi;
 
 /**
  * Stateless, dependency-free utility for computing Body Mass Index (BMI) and
