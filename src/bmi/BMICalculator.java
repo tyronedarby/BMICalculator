@@ -4,6 +4,9 @@
 
 package bmi;
 
+import edu.georgiasouthern.bmi.BmiCalculator;
+import edu.georgiasouthern.bmi.BmiCategory;
+
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -72,24 +75,19 @@ public class BMICalculator extends Application{
 	// Calculate BMI
 	private void calculateBMI() {
 		// make sure there are no blank or un-entered values
-		if (tf1.getText() != null && !tf2.getText().isEmpty() && tf1.getText() != null && !tf2.getText().isEmpty()) {
-			double weight = Double.parseDouble(tf1.getText());
-			double height = Double.parseDouble(tf2.getText());
-			String category = "";
-			
-			double bmi = weight / Math.pow(height, 2);
-			
-			if(bmi < 18.5) {
-				category = "Underweight";
-			} else if(bmi >= 18.5 && bmi <= 24.9) {
-				category = "Normal";
-			} else if(bmi >= 25.0 && bmi <= 29.9) {
-				category = "Overweight";
-			} else {
-				category = "Obese";
+		if (tf1.getText() != null && !tf1.getText().isEmpty()
+				&& tf2.getText() != null && !tf2.getText().isEmpty()) {
+			try {
+				double weight = Double.parseDouble(tf1.getText());
+				double height = Double.parseDouble(tf2.getText());
+
+				double bmi = BmiCalculator.calculate(weight, height);
+				BmiCategory category = BmiCategory.of(bmi);
+
+				tf3.setText(String.format("%.1f - %s", bmi, category.label()));
+			} catch (NumberFormatException | IllegalArgumentException ex) {
+				tf3.setText("Invalid input");
 			}
-			
-			tf3.setText(String.format("%.1f - %s", bmi, category));
 		} else {
 			tf3.setText("Enter both values");
 		}
